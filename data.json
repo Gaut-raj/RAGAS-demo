@@ -1,0 +1,14 @@
+{
+  "documents": [
+    {"id": "review", "text": "High-risk customer review: a high-risk customer requires manual analyst review before onboarding."},
+    {"id": "screening", "text": "Customer clearance screening: clearance requires a completed screening result with status CLEAR. A pending screening result cannot support clearance."},
+    {"id": "retention", "text": "Screening evidence retention: keep screening results and analyst decisions for five years."},
+    {"id": "escalation", "text": "Sanctions screening escalation: escalate a possible sanctions match to the compliance team. Keep the customer pending until the match is resolved."},
+    {"id": "travel", "text": "Employee travel: submit expense receipts within thirty days."}
+  ],
+  "questions": [
+    {"id": "q1", "question": "What high-risk customer review and customer clearance screening are required before onboarding?", "reference": "A high-risk customer requires manual analyst review before onboarding. Clearance requires a completed screening result with status CLEAR.", "expected_documents": ["review", "screening"]},
+    {"id": "q2", "question": "What customer clearance screening status is required, and how long is screening evidence retention?", "reference": "Clearance requires a completed screening result with status CLEAR. Screening results and analyst decisions must be kept for five years.", "expected_documents": ["screening", "retention"]},
+    {"id": "q3", "question": "What sanctions screening escalation is required for a possible match, and what screening evidence retention applies?", "reference": "Escalate a possible sanctions match to the compliance team and keep the customer pending until resolution. Keep screening results and analyst decisions for five years.", "expected_documents": ["escalation", "retention"]}
+  ]
+}
